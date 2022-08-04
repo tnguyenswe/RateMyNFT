@@ -7,7 +7,7 @@ import Headline from '../Headline';
 const Body = () => {
     return(
         <Flex sx={{px: ['30px', '50px'], justifyContent: 'center', flexDirection: 'column', alignItems: ['center',null, 'start'], textAlign: 'start', overflow: 'hidden'}}>
-            <Headline scale="h3" sx={{fontWeight: '600', pb: '50px'}}>✨ Top Projects</Headline>
+            <Headline scale="h3" sx={{fontSize: ['36px', '48px'], fontWeight: '600', pb: '50px'}}>✨ Top Projects</Headline>
             <PreviewCards />
         </Flex>
     )
