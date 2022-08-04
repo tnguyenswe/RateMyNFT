@@ -2,6 +2,7 @@
 import SingleCard from './SingleCard';
 import React from 'react';
 import { Grid } from 'theme-ui';
+import BAYCLogo from '../../assets/bayc-logo.png';
 
 const CardsData = [
     {
@@ -34,13 +35,30 @@ const CardsData = [
         creatorLink: 'https://opensea.io/TeamAzuki?tab=created',
         background: 'https://lh3.googleusercontent.com/O0XkiR_Z2--OPa_RA6FhXrR16yBOgIJqSLdHTGA0-LAhyzjSYcb3WEPaCYZHeh19JIUEAUazofVKXcY2qOylWCdoeBN6IfGZLJ3I4A=h600',
         primary: 'https://lh3.googleusercontent.com/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT=s0'
+    },
+    {
+        projectName: 'Azuki',
+        projectHref: 'Azuki',
+        creatorName: 'TeamAzuki',
+        creatorLink: 'https://opensea.io/TeamAzuki?tab=created',
+        background: 'https://lh3.googleusercontent.com/O0XkiR_Z2--OPa_RA6FhXrR16yBOgIJqSLdHTGA0-LAhyzjSYcb3WEPaCYZHeh19JIUEAUazofVKXcY2qOylWCdoeBN6IfGZLJ3I4A=h600',
+        primary: 'https://lh3.googleusercontent.com/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT=s0'
     }
 ];
 
 const PreviewCards = () => {
 
     return (
-        <Grid sx={{ maxWidth: '90%', gridTemplateColumns: ['1fr', '1fr 1fr', null, '1fr 1fr 1fr'], gridColumnGap: ['10px', '30px', null, '50px'], gridRowGap: ['20px', '20px'] }}>
+        <Grid sx={{ 
+            backgroundColor: 'navy50',
+            width: '100%',
+            gridTemplateColumns: ['1fr', '1fr 1fr', '1fr 1fr', '1fr 1fr 1fr 1fr'],
+            alignItems: 'center',
+            justifyItems: 'center',
+            py: '20px',
+            borderRadius: '40px',
+            gridColumnGap: ['10px', '30px', null, '50px'], 
+            gridRowGap: ['20px', '20px'] }}>
             {
                 CardsData.map((data, i) => {
                     return (<SingleCard

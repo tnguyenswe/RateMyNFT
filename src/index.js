@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -12,14 +13,18 @@ import {
 } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Reviews from './pages/reviews';
+import { Image } from 'theme-ui';
+import Ellipse from './assets/ellipse.png';
+import PFP from './assets/userPFP.jpeg';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <NavBar/>
+        <Image sx={{position: 'absolute', top: '0', right:'0', zIndex: '-1'}} src={Ellipse}/>
+        <NavBar userImage={PFP}/>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<App/>} />
           <Route path="/reviews/:id" element={<Reviews/>}/>
         </Routes>
       </ThemeProvider>
