@@ -25,6 +25,7 @@ ReactDOM.render(
         <NavBar userImage={PFP}/>
         <Routes>
           <Route path="/" element={<App/>} />
+          <Route path="/RateMyNFT" element={<App/>} />
           <Route path="/reviews/:id" element={<Reviews/>}/>
         </Routes>
       </ThemeProvider>

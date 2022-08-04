@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Flex, Text, Button, Image, Box, Grid } from "theme-ui";
-import React from "react";
+import React, { useState } from "react";
 import Headline from '../Headline';
 import SearchBar from '../SearchBar';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,16 @@ import Ellipse from '../../assets/ellipse-2.png';
 import Line from '../../assets/line-1.png';
 
 const NavBar = (props) => {
+    const [navState, setNavState] = useState('home');
+
+    const clickAbout = () => {
+        setNavState('about')
+    }
+
+    const clickHome = () => {
+        setNavState('home')
+    }
+
     return (
         <Grid
             sx={(theme) => ({
@@ -17,41 +27,60 @@ const NavBar = (props) => {
                 width: "100%",
                 minHeight: "60px",
                 height: '100%',
-                gridTemplateColumns: '1fr 1fr',
-                py: ["10px", "60px"],
+                gridTemplateColumns: ['3fr 1fr', '1fr 1fr'],
+                py: ["40px", "60px"],
                 position: "relative",
                 mb: '2rem',
                 px: ['30px', '50px']
             })}
         >
             <Flex sx={{ alignItems: 'center', alignSelf: 'start', justifySelf: 'start' }}>
-                <Link to="/" sx={{ textDecoration: 'none', color: 'inherit', justifySelf: 'start' }}>
+                <Link to="/" sx={{ textDecoration: 'none', color: 'inherit', justifySelf: 'start', display: ['none', null, null, 'flex'] }}>
                     <Text sx={{ fontWeight: '700', fontSize: 4 }}>RateMy<Text sx={{ fontWeight: '700', fontSize: 4, color: 'navy10', mr: '10px' }}>NFT</Text></Text>
                 </Link>
                 <SearchBar />
             </Flex>
-            <Flex sx={{ alignItems: 'center', alignSelf: 'end', justifySelf: 'end', display: ['none', null, null, 'flex'] }}>
+            <Flex sx={{ alignItems: 'center', alignSelf: 'end', justifySelf: 'end', display: 'flex' }}>
                 <Grid sx={{
                     gridTemplateColumns: '1fr 1fr',
                     gridGap: '0',
-                    maxWidth: '180px'
+                    maxWidth: '180px',
+                    display: ['none', null, null, 'grid']
                 }}>
-                    <Link to="/about" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
-                        <Text sx={{}}>About</Text>
-                    </Link>
+                    {(navState === "about") ?
+                        <Link to="/about" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
+                            <Flex sx={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'start', height: '100%', pr: '30px' }}>
+                                <Text sx={{ color: 'white10', pb: '6px' }}>About</Text>
+                                <Image src={Ellipse} alt="Ellipse" sx={{ width: '4px', height: '4px', mb: '-10px', }} />
+                            </Flex>
+                        </Link>
+                    :
+                        <Link onClick={clickAbout} to="/about" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
+                            <Flex sx={{justifyContent: 'center', pr: '30px'}}>
+                            <Text sx={{}}>About</Text>
+                            </Flex>
+                        </Link>
+                    }  
 
-                    <Link to="/" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
+                    {(navState === "home") ?
+                    (<Link to="/" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
                         <Flex sx={{ flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                             <Text sx={{ color: 'white10', pb: '6px', minWidth: '100px' }}>Top Projects</Text>
                             <Image src={Ellipse} alt="Ellipse" sx={{ width: '4px', height: '4px', mb: '-10px', }} />
                         </Flex>
+                    </Link>) :
+                    <Link onClick={clickHome} to="/" sx={{ textDecoration: 'none', color: '#CDCDCD4D' }}>
+                        <Flex>
+                            <Text sx={{minWidth: '100px'}}>Top Projects</Text>
+                        </Flex>
                     </Link>
+                    }
                 </Grid>
-                <Image src={Line} sx={{ mr: '20px', ml: '10px' }} />
+                <Image src={Line} sx={{ mr: '20px', ml: '10px', display: ['none', null, null, 'flex'] }} />
 
                 <Link to="/createReview" sx={{textDecoration: 'none', color: 'white10'}}>
                     <Box sx={{
-                        display: 'flex',
+                        display: ['none','flex'],
                         justifyContent: 'center',
                         alignItems: 'center',
                         fontWeight: '700',

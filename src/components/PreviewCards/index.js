@@ -37,12 +37,28 @@ const CardsData = [
         primary: 'https://lh3.googleusercontent.com/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT=s0'
     },
     {
-        projectName: 'Azuki',
-        projectHref: 'Azuki',
-        creatorName: 'TeamAzuki',
-        creatorLink: 'https://opensea.io/TeamAzuki?tab=created',
-        background: 'https://lh3.googleusercontent.com/O0XkiR_Z2--OPa_RA6FhXrR16yBOgIJqSLdHTGA0-LAhyzjSYcb3WEPaCYZHeh19JIUEAUazofVKXcY2qOylWCdoeBN6IfGZLJ3I4A=h600',
-        primary: 'https://lh3.googleusercontent.com/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT=s0'
+        projectName: 'Cool Cats',
+        projectHref: 'CoolCats',
+        creatorName: 'CoolCatsContract',
+        creatorLink: 'https://opensea.io/collection/cool-cats-nft',
+        background: 'https://lh3.googleusercontent.com/H4Iu36XQNJqVlF99-0BuQna0sUlUcIrHt97ss3le_tAWw8DveEBfTktX3S0bP6jpC9FhN1CKZjoYzZFXpWjr1xZfQIwSSLeDjdi0jw=h600',
+        primary: 'https://lh3.googleusercontent.com/LIov33kogXOK4XZd2ESj29sqm_Hww5JSdO7AFn5wjt8xgnJJ0UpNV9yITqxra3s_LMEW1AnnrgOVB_hDpjJRA1uF4skI5Sdi_9rULi8=s168'
+    },
+    {
+        projectName: 'Doodles',
+        projectHref: 'Doodles',
+        creatorName: 'Doodles_LLC',
+        creatorLink: 'https://opensea.io/collection/doodles-official',
+        background: 'https://lh3.googleusercontent.com/svc_rQkHVGf3aMI14v3pN-ZTI7uDRwN-QayvixX-nHSMZBgb1L1LReSg1-rXj4gNLJgAB0-yD8ERoT-Q2Gu4cy5AuSg-RdHF9bOxFDw=h600',
+        primary: 'https://lh3.googleusercontent.com/7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ=s168'
+    },
+    {
+        projectName: 'CryptoPunks',
+        projectHref: 'CryptoPunks',
+        creatorName: 'CryptoPunks',
+        creatorLink: 'https://opensea.io/collection/cryptopunks',
+        background: 'https://lh3.googleusercontent.com/48oVuDyfe_xhs24BC2TTVcaYCX7rrU5mpuQLyTgRDbKHj2PtzKZsQ5qC3xTH4ar34wwAXxEKH8uUDPAGffbg7boeGYqX6op5vBDcbA=h600',
+        primary: 'https://lh3.googleusercontent.com/BdxvLseXcfl57BiuQcQYdJ64v-aI8din7WPk0Pgo3qQFhAUH-B6i-dCqqc_mCkRIzULmwzwecnohLhrcH8A9mpWIZqA7ygc52Sr81hE=s168'
     }
 ];
 
@@ -52,13 +68,13 @@ const PreviewCards = () => {
         <Grid sx={{ 
             backgroundColor: 'navy50',
             width: '100%',
-            gridTemplateColumns: ['1fr', '1fr 1fr', '1fr 1fr', '1fr 1fr 1fr 1fr'],
+            gridTemplateColumns: ['1fr', null, '1fr 1fr', '1fr 1fr 1fr'],
             alignItems: 'center',
             justifyItems: 'center',
             py: '20px',
             borderRadius: '40px',
             gridColumnGap: ['10px', '30px', null, '50px'], 
-            gridRowGap: ['20px', '20px'] }}>
+            gridRowGap: ['20px', '60px'] }}>
             {
                 CardsData.map((data, i) => {
                     return (<SingleCard
