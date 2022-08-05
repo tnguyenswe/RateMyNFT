@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Headline from '../Headline';
 import SearchBar from '../SearchBar';
 import { Link } from 'react-router-dom';
-import Write from '../../assets/write-ic.png';
+import Ethereum from '../../assets/ethereum-ic.svg';
 import Ellipse from '../../assets/ellipse-2.png';
 import Line from '../../assets/line-1.png';
 
@@ -36,7 +36,7 @@ const NavBar = (props) => {
         >
             <Flex sx={{ alignItems: 'center', alignSelf: 'start', justifySelf: 'start' }}>
                 <Link to="/" sx={{ textDecoration: 'none', color: 'inherit', justifySelf: 'start', display: ['none', null, null, 'flex'] }}>
-                    <Text sx={{ fontWeight: '700', fontSize: 4 }}>RateMy<Text sx={{ fontWeight: '700', fontSize: 4, color: 'navy10', mr: '10px' }}>NFT</Text></Text>
+                    <Text sx={{ fontWeight: '700', fontSize: 4 }}>RateMy<Text sx={{ fontWeight: '700', fontSize: 4, color: 'navy10', mr: '10px' }}>NFT R</Text></Text>
                 </Link>
                 <SearchBar />
             </Flex>
@@ -88,10 +88,10 @@ const NavBar = (props) => {
                         py: '10px',
                         px: '20px',
                         borderRadius: '20px',
-                        minWidth: '190px',
+                        minWidth: '200px',
                         background: 'linear-gradient(95.41deg, #3B5AD5 0%, #2745C3 100%)',
-                    }}>Write A Review
-                <Image src={Write} alt="Write" sx={{ pl: '10px' }} />
+                    }}>Send A Donation
+                <Image src={Ethereum} alt="Ethereum" sx={{ pl: '10px', maxHeight: '17px' }} />
                     </Box>
                 </Link>
                 <Flex sx={{

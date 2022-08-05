@@ -31,6 +31,8 @@ const theme = {
     },
     initialColorModeName: "light",
     colors: {
+      gray0: '#0508104D',
+      gray50: '#43464D',
       white10: '#CDCDCD',
       navy0: '#7184CF',
       navy10: '#3756D3',

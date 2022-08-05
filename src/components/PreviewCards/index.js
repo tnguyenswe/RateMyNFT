@@ -80,7 +80,6 @@ const PreviewCards = () => {
                     return (<SingleCard
                         key={i}
                         creatorName={CardsData[i].creatorName}
-                        creatorLink={CardsData[i].creatorLink}
                         projectName={CardsData[i].projectName}
                         background={CardsData[i].background}
                         projectHref={CardsData[i].projectHref}

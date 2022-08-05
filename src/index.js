@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Reviews from './pages/reviews';
+import CreateReviews from './pages/createReview';
 import { Image } from 'theme-ui';
 import Ellipse from './assets/ellipse.png';
 import PFP from './assets/userPFP.jpeg';
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Route path="/" element={<App/>} />
           <Route path="/RateMyNFT" element={<App/>} />
           <Route path="/reviews/:id" element={<Reviews/>}/>
+          <Route path="/createReview/:id" element={<CreateReviews/>}/>
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
