@@ -36,7 +36,7 @@ const NavBar = (props) => {
         >
             <Flex sx={{ alignItems: 'center', alignSelf: 'start', justifySelf: 'start' }}>
                 <Link to="/" sx={{ textDecoration: 'none', color: 'inherit', justifySelf: 'start', display: ['none', null, null, 'flex'] }}>
-                    <Text sx={{ fontWeight: '700', fontSize: 4 }}>RateMy<Text sx={{ fontWeight: '700', fontSize: 4, color: 'navy10', mr: '10px' }}>NFT R</Text></Text>
+                    <Text sx={{ fontWeight: '700', fontSize: 4 }}>RateMy<Text sx={{ fontWeight: '700', fontSize: 4, color: 'navy10', mr: '10px' }}>NFT</Text></Text>
                 </Link>
                 <SearchBar />
             </Flex>
